@@ -1,7 +1,7 @@
 ## SI 507 Final Project
 
 ## Introduction
-The goal of this project is to create a web application that provides users with information about cities in the United States and data visualizations for restaurants in those cities. To achieve this, we utilize several programming techniques such as caching, web API scraping, SQLite data manipulation, unit testing, and data visualization with Plotly and Flask. With these techniques, we aim to efficiently access and manage data, verify our code's functionality, and present our findings in a clear and engaging way.
+The goal of this project is to create a web application that provides users with information about cities in the United States and data visualizations for restaurants in those cities. To achieve this, we utilize several programming techniques such as caching, web API scraping, SQLite data manipulation, and data visualization with Plotly and Flask. With these techniques, we aim to efficiently access and manage data, verify our code's functionality, and present our findings in a clear and engaging way.
 
 
 ## Data Sources
