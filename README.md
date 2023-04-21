@@ -14,9 +14,11 @@ Wikipedia, which provides the data for the "Cities" table in the database. The r
 
 ## Run the Program
 ### Step 1: Apply an API Key for Yelp Fusion
-(1) Go to "https://www.yelp.com/developers/documentation/v3/authentication" and create your app according to the instruction. 
+(1) Go to "https://www.yelp.com/developers/documentation/v3/authentication" and create your app.
 
 (2) Create a new python file "secret.py" in the same folder as "program.py". And add the code:
+
+Well, actually you can use my secret.py, which is in this repo. 
 ```
 API_KEY = '<your key>'
 ```  
@@ -27,6 +29,6 @@ $ pip install -r requirements.txt --user
 
 ### Step 3: Run program.py  
 ```  
-$ python program.py
+$ python program_shaozhi.py
 ```  
 ### Step 4: Open "http://127.0.0.1:5000/ " in a browser
