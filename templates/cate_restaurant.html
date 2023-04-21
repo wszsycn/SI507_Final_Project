@@ -1,0 +1,21 @@
+<head>
+    <!-- Include Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <!-- Add an element to display the chart -->
+    <div id="chart"></div>
+
+    <script>
+        // Your displayRestaurants function here
+        
+        // Get the chart data from your Flask view
+        var chartData = JSON.parse('{{ chart_data | tojson }}');
+        
+        // Add the click event handler to the chart data
+        chartData.on('plotly_click', displayRestaurants);
+        
+        // Render the chart
+        Plotly.newPlot('chart', [chartData]);
+    </script>
+</body>

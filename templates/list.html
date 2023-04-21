@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    ol {
+      font-size: large;
+    }
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .list-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Restaurants in {{name}} {{city_or_state}}</h1>
+    {% if city_or_state == 'state' %}
+      <h2 class="list-header">Pie charts:</h2>
+      <ol>
+          <li><a href='/plot/{{city_or_state}}/{{name}}/pieplot_restaurant_categories'> Pie chart of restaurant by category</a></li>
+          <li><a href='/plot/{{city_or_state}}/{{name}}/pieplot_rating'> Pie chart of restaurant rating by percentage</a></li>
+          <li><a href='/plot/{{city_or_state}}/{{name}}/pieplot_price'> Pie chart of restaurant price by percentage</a></li>
+      </ol>
+
+      <h2 class="list-header">Bar charts:</h2>
+      <ol>
+        <li><a href='/plot/{{city_or_state}}/{{name}}/barplot_avgrating_each_category'> Bar chart of average rating by category from high to low</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{name}}/barplot_avgprice_each_category'> Bar chart of average Price by category from high to low</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{name}}/barplot_avgreview_each_category'> Bar chart of average number of reviews by category</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{name}}/barplot_toprated_restaurant'> Bar chart of the restaurants ranked by rating from high to low</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{name}}/barplot_topprice_restaurant'> Bar chart of the restaurants ranked by price from high to low</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{name}}/barplot_mostreviewed_restaurant'> Bar chart of the restaurants ranked by the number of reviews from high to low</a></li>
+      </ol>
+
+      <h2 class="list-header">Show restaurant in charts:</h2>
+      <ol>
+        <li><a href='/plot_restaurant/{{city_or_state}}/{{name}}/directplot_avgreview_each_category'> Directly plot the name of restaurant of average number of reviews by category</a></li>
+      </ol>
+
+      <h2 class="list-header">Show restaurant in tree structures:</h2>
+      <ol>
+        <li><a href='/plot_tree/{{city_or_state}}/{{name}}/directplot_tree'> Directly plot the pictures of restaurant of average number of reviews by category</a></li>
+      </ol>
+    
+    {% else %}
+      <h2 class="list-header">Pie charts:</h2>
+      <ol>
+          <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/pieplot_restaurant_categories'> Pie plot of restaurant categories</a></li>
+          <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/pieplot_rating'> Pie plot of restaurant rating by percentage</a></li>
+          <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/pieplot_price'> Pie plot of restaurant price by percentage</a></li>
+      </ol>
+
+      <h2 class="list-header">Bar charts:</h2>
+      <ol>
+        <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/barplot_avgrating_each_category'> Bar plot of average rating by category</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/barplot_avgprice_each_category'> Bar plot of average Price by category</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/barplot_avgreview_each_category'> Bar plot of average number of reviews by category</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/barplot_toprated_restaurant'> Bar plot of top-rated restaurants</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/barplot_topprice_restaurant'> Bar plot of the most expensive restaurants</a></li>
+        <li><a href='/plot/{{city_or_state}}/{{id_pos}}_{{name}}/barplot_mostreviewed_restaurant'> Bar plot for the restaurants with the most number of reviews</a></li>
+      </ol>
+
+      <h2 class="list-header">Show restaurant in charts:</h2>
+      <ol>
+        <li><a href='/plot_restaurant/{{city_or_state}}/{{id_pos}}_{{name}}/directplot_avgreview_each_category'> Directly plot the name of restaurant of average number of reviews by category</a></li>
+      </ol>
+
+      <h2 class="list-header">Show restaurant in tree structure:</h2>
+      <ol>
+        <li><a href='/plot_tree/{{city_or_state}}/{{id_pos}}_{{name}}/directplot_tree'> Directly plot the name of restaurant of average number of reviews by category</a></li>
+      </ol>
+      
+    {% endif %}
+  </div>
+</body>
+</html>
+
