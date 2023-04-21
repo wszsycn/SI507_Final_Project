@@ -6,6 +6,8 @@ The goal of this project is to create a web application that provides users with
 
 ## Data Sources
 Yelp Fusion, which is used as the data source for the "Restaurants" table in the database. The relevant API endpoint is (https://www.yelp.com/developers/documentation/v3/business_search).
+
+
 Wikipedia, which provides the data for the "Cities" table in the database. The relevant page is (https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population). 
 
 
